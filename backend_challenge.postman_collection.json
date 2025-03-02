@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "a736f05f-87a3-4cc4-a58a-2817d2b2b777",
+		"name": "backend_challenge",
+		"description": "Testing the API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40235139"
+	},
+	"item": [
+		{
+			"name": "getAllBooks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/books"
+			},
+			"response": []
+		},
+		{
+			"name": "addNewBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Nada\",\r\n    \"author\": \"Nada2\",\r\n    \"description\": \"dhsauhd\",\r\n    \"published_year\": 2024\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books"
+			},
+			"response": []
+		},
+		{
+			"name": "getSearchBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/search?page=1&pageSize=10&author=José Saramago&title=Memorial do Convento",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "author",
+							"value": "José Saramago"
+						},
+						{
+							"key": "title",
+							"value": "Memorial do Convento"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDetailBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books/OL40766966W"
+			},
+			"response": []
+		}
+	]
+}
