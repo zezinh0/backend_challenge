@@ -2,8 +2,14 @@
 
 ## Overview
 
-This project is a backend service built with **ASP.NET Core**. It provides API functionality and runs in a containerized environment using **Docker**.
+This mini-project is a backend service built with **ASP.NET Core**. It provides API functionality and runs in a containerized environment using **Docker**. For more detailed information about the mini-project, refer to the `Backend_Challenge_Devlop.pdf`.
 
+The API handles various operations related to managing books, including:
+
+- Retrieving all books
+- Adding a new book
+- Searching books by various parameters such as author, title, etc.
+- Retrieving detailed information about a specific book by ID
 ## Prerequisites
 
 Before running the project, ensure you have the following installed:
@@ -49,7 +55,7 @@ To run the project using Docker, follow these steps:
 
    This enables debugging configurations.
 
-3. **Stopping the Containers**
+4. **Stopping the Containers**
 
    ```sh
    docker-compose down
@@ -57,7 +63,7 @@ To run the project using Docker, follow these steps:
 
 ## Postman Collection
 
-The project includes a Postman collection to test the API. You can import the `backend_challenge.postman_collection.json` file into Postman to test the following API requests:
+The project includes a **Postman collection** to **test the API**. You can import the `backend_challenge.postman_collection.json` file into Postman to test the following API requests:
 
 - **GET** `/books` - Retrieve all books.
 - **POST** `/books` - Add a new book.
