@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel about the serious issues of rape and racial inequality.",
+    "published_year": 1960
+  },
+  {
+    "id": "2",
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel set in a totalitarian society.",
+    "published_year": 1949
+  },
+  {
+    "id": "3",
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "description": "Captain Ahab's obsessive quest to kill the white whale, Moby Dick",
+    "published_year": 1851
+  }
+]
