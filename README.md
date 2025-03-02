@@ -10,6 +10,7 @@ The API handles various operations related to managing books, including:
 - Adding a new book
 - Searching books by various parameters such as author, title, etc.
 - Retrieving detailed information about a specific book by ID
+
 ## Prerequisites
 
 Before running the project, ensure you have the following installed:
