@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace backend_challenge.Models;
 
+/// <summary>
+/// Represents a book in the system with details such as title, author, description, and published year.
+/// </summary>
 public class Book
 {
 
@@ -16,7 +19,7 @@ public class Book
 
 
     [JsonPropertyName("author")]
-    public required string author{ get; set; } = string.Empty;
+    public required string author { get; set; } = string.Empty;
 
 
     [JsonPropertyName("description")]
