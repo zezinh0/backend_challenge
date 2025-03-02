@@ -8,26 +8,39 @@ This project is a backend service built with **ASP.NET Core**. It provides API f
 
 Before running the project, ensure you have the following installed:
 
-- [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) (if running locally)
-- [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/)
+- [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/) (for running the application in containers)
 - [Postman](https://www.postman.com/) (for testing the API)
-- Visual Studio Code (optional, for local development)
 
+### .NET SDK Installation (Optional)
+
+- **Installing .NET 9.0 SDK** is **not necessary** if you're running the project using **Docker**.
+  - Docker will handle the required environment setup, including the .NET runtime and SDK.
+  - You only need to install the **.NET SDK** locally if you plan to **develop** or **build the project** without using Docker.
 ## Running the Project
 
 ### Using Docker
 
 To run the project using Docker, follow these steps:
 
-1. **Build and Start Containers**
+1. **Build the Docker Containers**
+
+   First, build the Docker containers using the following command:
 
    ```sh
-   docker-compose up --build
+   docker-compose build
    ```
 
-   This command builds and starts the container, mapping port **8080** to the host.
+   This command builds the container.
 
-2. **Running in Debug Mode**\
+2. **Start Containers**
+
+   ```sh
+   docker-compose up
+   ```
+
+   This command starts the container.
+
+3. **Running in Debug Mode**\
    If you need to debug, use:
 
    ```sh
@@ -42,11 +55,26 @@ To run the project using Docker, follow these steps:
    docker-compose down
    ```
 
-## Project Structure
+## Postman Collection
 
-- **backend\_challenge.sln**: Visual Studio solution file
-- **Dockerfile**: Defines how to build the Docker image
-- **docker-compose.yml**: Configuration for running the service in Docker
+The project includes a Postman collection to test the API. You can import the `backend_challenge.postman_collection.json` file into Postman to test the following API requests:
+
+- **GET** `/books` - Retrieve all books.
+- **POST** `/books` - Add a new book.
+- **GET** `/books/search` - Search books by parameters (author, title, etc.).
+- **GET** `/books/{id}` - Get details of a specific book by ID.
+
+### Importing into Postman
+
+1. **Open Postman** and click on **Import** in the top-left corner.
+2. Choose the **File** tab.
+3. Click **Choose Files** and select the `backend_challenge.postman_collection.json` file.
+4. After the file is selected, click **Import**.
+
+### Setting the URL in Postman
+
+Once you have imported the collection, ensure that the **URL** variable in Postman is set to `http://localhost:8080` (or wherever your containerized API is running).
+
 
 ## Environment Variables
 
